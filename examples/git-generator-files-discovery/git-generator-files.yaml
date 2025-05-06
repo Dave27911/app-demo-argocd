@@ -5,7 +5,7 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: gcr.io/heptio-images/ks-guestbook-demo:0.1
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
     argocd-image-updater.argoproj.io/git-branch: main
-  name: guestbook
+  name: demo-atdac-app
   namespace: dave-ns
 spec:
   destination:
