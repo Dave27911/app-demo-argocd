@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_app_demo_argocd_1785433837323-pr-trigger-input-set
+  identifier: Build_app_demo_argocd_1785433837323prtriggerinputset
+  orgIdentifier: Jorge_playground
+  projectIdentifier: CaPer_CI_CD
+  pipeline:
+    identifier: Build_app_demo_argocd_1785433837323
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
