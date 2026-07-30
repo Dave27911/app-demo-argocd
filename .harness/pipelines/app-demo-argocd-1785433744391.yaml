@@ -18,7 +18,27 @@ pipeline:
                   identifier: Echo_Welcome_Message
                   spec:
                     shell: Sh
-                    command: echo "Welcome to Harness CI"
+                    command: echo "Bienvenido a la Capacitación Personal de CI/CD"
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: Imagen1
+                  identifier: Imagen1
+                  spec:
+                    repo: JIGGdemoCaPer
+                    tags:
+                      - latest
+                    caching: true
+                    registryRef: account.kcd_docker_registry
+              - step:
+                  type: GitClone
+                  name: clonar codigo
+                  identifier: clonar_codigo
+                  spec:
+                    repoName: account.Harness-pipeline
+                    build:
+                      type: branch
+                      spec:
+                        branch: main
           platform:
             os: Linux
             arch: Amd64
