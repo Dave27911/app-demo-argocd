@@ -1,0 +1,33 @@
+pipeline:
+  name: Build app-demo-argocd
+  identifier: Build_app_demo_argocd_1785433837323
+  projectIdentifier: CaPer_CI_CD
+  orgIdentifier: Jorge_playground
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.GitHub_David
+        repoName: app-demo-argocd
+        build: <+input>
