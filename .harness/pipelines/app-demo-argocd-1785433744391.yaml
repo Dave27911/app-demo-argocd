@@ -34,7 +34,7 @@ pipeline:
                   name: clonar codigo
                   identifier: clonar_codigo
                   spec:
-                    connectorRef: jigggithub2
+                    connectorRef: jigg_github
                     build:
                       type: branch
                       spec:
