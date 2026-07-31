@@ -24,10 +24,12 @@ pipeline:
                   name: Imagen1
                   identifier: Imagen1
                   spec:
-                    repo: jiggdemocaper
+                    repo: jiggodemocaper
                     tags:
                       - latest
                     caching: true
+                    dockerfile: Dockerfile
+                    context: .
                     registryRef: account.kcd_docker_registry
               - step:
                   type: GitClone
