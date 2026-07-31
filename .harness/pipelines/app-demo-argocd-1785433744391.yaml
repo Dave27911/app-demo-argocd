@@ -27,7 +27,7 @@ pipeline:
                     repo: jiggodemocaper
                     tags:
                       - latest
-                    caching: true
+                    caching: false
                     dockerfile: Dockerfile
                     context: .
                     registryRef: account.kcd_docker_registry
@@ -37,6 +37,7 @@ pipeline:
                   identifier: clonar_codigo
                   spec:
                     connectorRef: jigg_github
+                    depth: 1
                     build:
                       type: branch
                       spec:
