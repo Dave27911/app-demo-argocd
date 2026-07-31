@@ -24,13 +24,14 @@ pipeline:
                   name: Imagen1
                   identifier: Imagen1
                   spec:
-                    repo: jiggodemocaper
+                    connectorRef: DockerJiggcaper
+                    repo: jiggoatdac/caperprueba
                     tags:
                       - latest
+                      - <+pipeline.sequenceId>
                     caching: false
                     dockerfile: Dockerfile
                     context: .
-                    registryRef: account.kcd_docker_registry
               - step:
                   type: GitClone
                   name: clonar codigo
