@@ -24,7 +24,7 @@ pipeline:
                   name: Imagen1
                   identifier: Imagen1
                   spec:
-                    repo: JIGGdemoCaPer
+                    repo: jiggdemocaper
                     tags:
                       - latest
                     caching: true
